@@ -13,12 +13,13 @@ function showWeather(data, page) {
     var windDir = document.getElementById('wind-direction');
     var lastUpdate = document.getElementById('last-update');
 
-    if (data[page].max_temp_fahrenheit) {
+    if (data[page].max_temp_fahrenheit && data[page].min_temp_fahrenheit) {
         temp.innerHTML = `${Math.ceil((data[page].max_temp_fahrenheit + data[page].min_temp_fahrenheit) / 2)}&deg;F`;
+    } else if (data[page].max_temp_fahrenheit || data[page].min_temp_fahrenheit) {
+        temp.innerHTML = data[page].max_temp_fahrenheit || data[page].min_temp_fahrenheit;
     } else {
         temp.innerHTML = '-';
     }
-
     if (!data[page].wind_speed) {
         windPow.innerHTML = `Wind power: --`;
     } else {
