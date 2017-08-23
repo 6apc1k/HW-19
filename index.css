@@ -1,0 +1,47 @@
+body {
+
+    background: white url('images/Mars-NASA.jpg') no-repeat fixed center;
+    color: white;
+    padding: 310px 0 0 80px;
+}
+.wrapper {
+    border: 1px solid white;
+    font-size: 18px;
+    width: 400px;
+    padding: 10px;
+    text-align: center;
+}
+
+.container {
+    width: 400px;
+}
+
+p {
+    text-transform: uppercase;
+}
+p:first-child {
+    font-size: 24px;
+}
+#temperature {
+    font-size: 90px;
+    font-weight: bold;
+    margin: -15px 0;
+}
+.loader {
+    border: 3px solid rgba(243, 243, 243, 0.8);
+    border-top: 3px solid rgba(52, 152, 219, 0.8);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin: 10px auto;
+    visibility: hidden;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
