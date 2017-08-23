@@ -17,6 +17,7 @@ function showWeather(data, page) {
         temp.innerHTML = `${Math.ceil((data[page].max_temp + data[page].min_temp) / 2)}&deg;C`;
     } else if (data[page].max_temp || data[page].min_temp) {
         temp.innerHTML = data[page].max_temp || data[page].min_temp;
+        temp.innerHTML += `&deg;C`;
     } else {
         temp.innerHTML = '-';
     }
